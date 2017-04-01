@@ -1,6 +1,8 @@
 #!/usr/bin/ruby -w
 
-seperator = '.... seperator line ...... '
+def seperator
+  puts '.... seperator line ...... '
+end
 
 # print without newline
 print 'Hello Ruby' # with new
@@ -8,7 +10,7 @@ print 'Hello Ruby' # with new
 # print with newline
 puts 'Hello Ruby'
 
-puts seperator
+seperator
 
 =begin
 # Here Document
@@ -22,7 +24,7 @@ print <<doc_string
   this is a line3
 doc_string
 
-puts seperator
+seperator
 
 # same as above, but with double quotes and
 print <<"doc_string"
@@ -31,14 +33,14 @@ print <<"doc_string"
   this is a line6
 doc_string
 
-puts seperator
+seperator
 
 # execute commands
 print <<`exe_cmd`
   pwd
 exe_cmd
 
-puts seperator
+seperator
 
 # stack 2 together
 print <<`exe_cmd`, <<doc_string
@@ -47,8 +49,7 @@ exe_cmd
   'this is a string'
 doc_string
 
-puts seperator
-
+seperator
 
 # ruby BEGIN and END statement, code to be executed before and after program is run
 BEGIN {
